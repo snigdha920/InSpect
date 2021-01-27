@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 
 import config from "../config";
+import userDetails from "../data/user";
 
 function Home({ navigation }) {
   const [email, setEmail] = useState(null);
@@ -94,6 +95,9 @@ function Home({ navigation }) {
     if (validateEmail(email)) {
       if (validateName(name)) {
         if (validateAge(parseInt(age))) {
+          userDetails.age = parseInt(age);
+          userDetails.firstName = name;
+          userDetails.email = email;
           navigation.dispatch(
             CommonActions.reset({
               index: 0,

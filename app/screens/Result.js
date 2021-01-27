@@ -5,6 +5,7 @@ import { CommonActions } from "@react-navigation/native";
 import questionList from "../data/questions";
 import shortAns from "../data/shortAnswers";
 import config from "../config";
+import userDetails from "../data/user";
 
 function Result({ navigation }) {
   console.log(questionList.map((q) => q.response));
@@ -26,11 +27,16 @@ function Result({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.summary}>
+        <Text style={styles.title}>{"Hi " + userDetails.firstName + "!"}</Text>
         {questionList[1].response.length === 0 &&
-          questionList[0].response.length === 0 &&
-          !shortAns[0] && (
-            <Text style={styles.title}>You did not answer any questions.</Text>
-          )}
+        questionList[0].response.length === 0 &&
+        !shortAns[0] ? (
+          <Text style={styles.title}>You did not answer any questions.</Text>
+        ) : (
+          <Text style={styles.title}>
+            After evaluation of your answers, we have concluded:
+          </Text>
+        )}
 
         {questionList[1].response.length > 0 && (
           <Text style={styles.title}>
