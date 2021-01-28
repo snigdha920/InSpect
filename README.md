@@ -6,6 +6,7 @@ Created using React Native.
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
+* [Set Up](#setup)
 * [Status](#status)
 * [Inspiration](#inspiration)
 
@@ -24,6 +25,9 @@ Created using React Native.
 
 ## Technologies
 Project is created with : React Native using expo.
+
+## Set Up
+Visit the app by navigating to this link - https://expo.io/@snigdha920/projects/DoneWithIt
 
 ## Status 
 Updates to be included :
